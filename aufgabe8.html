@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    
+    <div id="zid"></div>
+
+        <script>
+
+            const container = document.getElementById('zid');
+            container.innerHTML += "Start<br>"
+
+            let ran = Math.floor(Math.random()*6) + 5;
+
+            switch(ran){
+
+                case 10:
+                    container.innerHTML += "Ten"
+
+                case 9:
+                    container.innerHTML += "nine"
+                    break;
+
+                case 8:
+                    container.innerHTML += "eight"
+                    break;
+
+                case 7:
+                    container.innerHTML += "seven"
+                    break;
+
+                case 6:
+                    container.innerHTML += "six"
+                    break;
+
+                case 5:
+                    container.innerHTML += "five"
+                    break;
+
+                default:
+                    container.innerHTML += "Unbekannt"
+            }
+
+        </script>
+
+    </div> 
+</body>
+</html>

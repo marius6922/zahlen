@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Zahl</title>
+</head>
+<body>
+
+    <div id="zid"></div>
+
+        <script>
+
+            const container = document.getElementById('zid');
+            container.innerHTML += "Start<br>"
+
+             let ran1 = Math.floor(Math.random()*101)
+             let ran2 = Math.floor(Math.random()*101)
+
+             if (ran1 < ran2 && ran1 < 50) {
+
+                container.innerHTML += "Zahl 1 ist kleiner als Zahl 2 und Mini<br>"
+
+             }
+
+             if (ran1 < 30 && ran2 < 30){
+
+                container.innerHTML += "Eine der beiden ist kleiner als 30<br>"
+
+             }
+
+             if(ran1 < 50 && ran2 != 50) {
+
+                container.innerHTML += "Erste Zahl klein, zweite kein 50iger<br>"
+
+             }
+
+        </script>
+
+    </div> 
+    
+</body>
+</html>
