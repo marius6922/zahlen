@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funktionen</title>
+</head>
+<body>
+    
+    <div id="main"></div>
+    <div id="main2"></div>
+
+    <script>
+
+        function add(a,b){
+
+            return a+b;
+
+        }
+
+        function subtract(a,b){
+
+            return a-b;
+
+        }
+
+        function multiply(a,b){
+
+            return a*b;
+
+        }
+
+        function divide(a,b){
+
+            return a / b;
+
+        }
+
+        function output(wert, name){
+            let output = document.getElementById(name);
+            output.innerHTML += wert + '<br>'
+        }
+        function ausgabe(wert, outputId){
+
+        switch (outputId){
+
+            case 1:
+                let output = document.getElementById("main");
+                output.innerHTML += wert + '<br>';
+                break;
+            case 2:
+                let output = document.getElementById("main2");
+                output.innerHTML += wert + '<br>';
+                break;
+            case 3: 
+                console.log(wert);
+                break;
+
+            default:
+                break;
+        }
+
+    }
+
+        ausgabe(add(5,10),1);
+        ausgabe(subtract(5,10),2);
+        ausgabe(multiply(5,10),3);
+        ausgabe(divide(5,10),1);
+
+    </script>
+
+</body>
+</html>

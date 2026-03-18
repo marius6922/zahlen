@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+
+    <div id="main"></div>
+
+    <script>
+
+        let gruppe = ["Marius","Noah","Hasan","Elias","Muhammed","Nico","Salih","Emir","Kjell","Yigit","Yannik","Melih","Dilsad"];
+
+        gruppe.sort();
+        gruppe.reverse();
+
+        gruppe.unshift("Markus");
+        gruppe.push("Schwärzler");
+        
+        const container = document.getElementById('main');
+        container.innerHTML += gruppe.join(", ") + "<br>";
+        container.innerHTML += gruppe[4] + ", " + gruppe[5] + ", " + gruppe[6];
+
+    </script>
+    
+</body>
+</html>
