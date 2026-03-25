@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array</title>
+    <title>Document</title>
 </head>
+ 
 <body>
-
-    <div id="main"></div>
-
+    <div id="output"></div>
     <script>
-
-        let gruppe = ["Marius","Noah","Hasan","Elias","Muhammed","Nico","Salih","Emir","Kjell","Yigit","Yannik","Melih","Dilsad"];
-
-        gruppe.sort();
-        gruppe.reverse();
-
-        gruppe.unshift("Markus");
-        gruppe.push("Schwärzler");
-        
-        const container = document.getElementById('main');
-        container.innerHTML += gruppe.join(", ") + "<br>";
-        container.innerHTML += gruppe[4] + ", " + gruppe[5] + ", " + gruppe[6];
-
+ 
+        function output(wert, name) {
+            let output = document.getElementById(name);
+            output.innerHTML += wert + '<br>'
+        }
+ 
+        function outputschleife(liste) {
+            for (let i = 0; i < liste.length; i++) {
+                output(i + " " + liste[i], 'output');
+            }
+            output('<br>', 'output');
+        }
+ 
+        let schueler = ['Markus', 'Schwärzler', 'Emir', 'Yannick', 'Matteo', 'Yigit', 'Melih', 'Salih'];
+        outputschleife(schueler);
+        schueler.sort();
+        outputschleife(schueler);
+        schueler.reverse();
+        outputschleife(schueler);
+        schueler.push('Tim');
+        outputschleife(schueler);
+        schueler.shift();
+        outputschleife(schueler);
+ 
     </script>
-    
+ 
 </body>
+ 
 </html>
