@@ -28,12 +28,14 @@ function berechnen() {
 let eingabe = parseFloat(document.getElementById("eingabe").value);
 let op = document.getElementById("operation").value;
 
+let vorher = rechnungszahl;
+
 if (op == "+") rechnungszahl += eingabe;
 else if (op == "-") rechnungszahl -= eingabe;
 else if (op == "*") rechnungszahl *= eingabe;
 else if (op == "/") rechnungszahl /= eingabe;
 
-verlauf += "<p>" + rechnungszahl + "</p>";
+verlauf += "<p>" + vorher + " " + op + " " + eingabe + " = " + rechnungszahl + "</p>";
 document.getElementById("ausgabe").innerHTML = verlauf;
 }
 </script>
