@@ -33,7 +33,7 @@ else if (op == "-") rechnungszahl -= eingabe;
 else if (op == "*") rechnungszahl *= eingabe;
 else if (op == "/") rechnungszahl /= eingabe;
 
-verlauf += rechnungszahl + "<br>";
+verlauf += "<p>" + rechnungszahl + "</p>";
 document.getElementById("ausgabe").innerHTML = verlauf;
 }
 </script>
