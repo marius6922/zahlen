@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Taschenrechner</title>
+</head>
+<body>
+
+<h1>Taschenrechner</h1>
+
+<input id="eingabe">
+<select id="operation">
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="*">*</option>
+<option value="/">/</option>
+</select>
+
+<button onclick="berechnen()">Berechnen</button>
+
+<div id="ausgabe"></div>
+
+<script>
+let rechnungszahl = 0;
+let verlauf = "";
+
+function berechnen() {
+let eingabe = parseFloat(document.getElementById("eingabe").value);
+let op = document.getElementById("operation").value;
+
+if (op == "+") rechnungszahl += eingabe;
+else if (op == "-") rechnungszahl -= eingabe;
+else if (op == "*") rechnungszahl *= eingabe;
+else if (op == "/") rechnungszahl /= eingabe;
+
+verlauf += rechnungszahl + "<br>";
+document.getElementById("ausgabe").innerHTML = verlauf;
+}
+</script>
+
+</body>
+</html>
